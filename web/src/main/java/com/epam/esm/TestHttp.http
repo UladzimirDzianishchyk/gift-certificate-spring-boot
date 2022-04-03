@@ -1,0 +1,155 @@
+GET http://localhost:8080/api/v1/gift-certificates/100
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/api/v1/gift-certificates?maxResult=2&page=1
+Content-Type: application/json
+
+###
+
+
+GET http://localhost:8080/api/v1/gift-certificates/find-by-name?maxResult=2&page=1&name=ph&sort=lastUpdateDate
+Content-Type: application/json
+
+
+###
+
+GET http://localhost:8080/api/v1/gift-certificates/find-by-description?maxResult=2&page=1&name=wat&sort=name
+Content-Type: application/json
+
+
+###
+
+
+GET http://localhost:8080/api/v1/gift-certificates/get-cert-by-tags?name=car&name=pre
+Content-Type: application/json
+
+
+###
+
+POST http://localhost:8080/api/v1/gift-certificates
+Content-Type: application/json
+
+{
+  "name": "TestSave0033",
+  "description": "someDescription",
+  "price": 100.0,
+  "duration": 22,
+  "tags": [
+    {
+      "name": "tagtwo"
+    },
+    {
+      "name": "tagone"
+    }
+  ]
+}
+
+
+###
+
+DELETE http://localhost:8080/api/v1/gift-certificates/86
+Content-Type: application/json
+
+###
+
+PATCH http://localhost:8080/api/v1/gift-certificates
+Content-Type: application/json
+
+{
+  "id": 86,
+  "description": "someDescription2222",
+  "price": 9119.0,
+  "duration": 91,
+  "tags": [
+    {
+
+      "name": "tagthree"
+    }
+  ]
+}
+
+
+###
+
+PATCH http://localhost:8080/api/v1/gift-certificates/update-price?id=1&price=26
+Content-Type: application/json
+
+###TAG
+
+GET http://localhost:8080/api/v1/tags/1
+Content-Type: application/json
+
+
+###
+
+GET http://localhost:8080/api/v1/tags?maxResult=2&page=1&name=pre&sort=name
+Content-Type: application/json
+
+###
+
+
+GET http://localhost:8080/api/v1/tags?maxResult=2&page=1&sort=name
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/api/v1/tags/find-most-popular-end-expensive-tag-by-user-id?userId=5
+Content-Type: application/json
+
+###
+
+
+DELETE http://localhost:8080/api/v1/tags/54
+Content-Type: application/json
+
+###
+
+POST http://localhost:8080/api/v1/tags
+Content-Type: application/json
+
+{
+  "name": "testAdd"
+}
+
+
+###
+
+###USER###################
+
+GET http://localhost:8080/api/v1/users/100
+Content-Type: application/json
+
+###
+GET http://localhost:8080/api/v1/users?maxResult=2&page=1&sort=lastUpdateDate
+Content-Type: application/json
+
+####
+
+GET http://localhost:8080/api/v1/users/buy-certificate?certId=900&userId=999
+Content-Type: application/json
+
+
+###
+GET http://localhost:8080/api/v1/users/get-by-name?maxResult=2&page=1&name=us&sort=lastUpdateDate
+Content-Type: application/json
+
+
+#####ORDER########
+
+GET http://localhost:8080/api/v1/orders/100
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/api/v1/orders?maxResult=2&page=1&sort=lastUpdateDate
+Content-Type: application/json
+
+
+###
+GET http://localhost:8080/api/v1/orders/get-orders-from-user?maxResult=2&page=1&userId=274&sort=lastUpdateDate
+Content-Type: application/json
+
+
+####
